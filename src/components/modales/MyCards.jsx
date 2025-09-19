@@ -3,13 +3,34 @@
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 
+import {
+  SiReact,
+  SiNextdotjs,
+  SiSpringboot,
+  SiNodedotjs,
+  SiTailwindcss,
+  SiDocker,
+  SiGithub,
+  SiTypescript,
+  SiJavascript,
+  SiGit,
+  SiPython,
+  SiMongodb,
+  SiPostgresql,
+  SiMysql,
+  SiFigma,
+  SiVite,
+} from "react-icons/si";
+
+import { FaJava } from "react-icons/fa";
+
 export const AboutMeCardContent = () => {
   return (
     <div className="mt-4 flex flex-col gap-6">
       <p className="space-y-4 text-sm text-gray-600 dark:text-gray-300">
         Passionate{" "}
         <span className="text-blue-500 dark:text-blue-400">
-          Software Engineer
+        Software Engineer
         </span>{" "}
         focused on building{" "}
         <span className="text-blue-500 dark:text-blue-400">scalable</span> and{" "}
@@ -44,7 +65,48 @@ export const AboutMeCardContent = () => {
 };
 
 export const ToolingCardContent = () => {
-  return <div>MyCards</div>;
+  const tools = [
+  // Frontend
+  { icon: <SiReact className="text-sky-400" />, name: "React" },
+//   { icon: <SiNextdotjs className="text-white" />, name: "Next.js" },
+//   { icon: <SiTypescript className="text-blue-400" />, name: "TypeScript" },
+  { icon: <SiJavascript className="text-yellow-400" />, name: "JavaScript" },
+  { icon: <SiTailwindcss className="text-cyan-400" />, name: "Tailwind CSS" },
+
+  // Backend
+  { icon: <FaJava className="text-red-500" />, name: "Java" },
+  { icon: <SiSpringboot className="text-green-500" />, name: "Spring Boot" },
+//   { icon: <SiNodedotjs className="text-green-400" />, name: "Node.js" },
+  { icon: <SiPython className="text-yellow-300" />, name: "Python" },
+
+  // Databases
+  { icon: <SiPostgresql className="text-sky-500" />, name: "PostgreSQL" },
+//   { icon: <SiMongodb className="text-green-500" />, name: "MongoDB" },
+  { icon: <SiMysql className="text-orange-400" />, name: "MySQL" },
+
+  // DevOps / Tools
+//   { icon: <SiDocker className="text-blue-500" />, name: "Docker" },
+  { icon: <SiGit className="text-orange-500" />, name: "Git" },
+  { icon: <SiGithub className="text-gray-300" />, name: "GitHub" },
+//   { icon: <SiFigma className="text-pink-500" />, name: "Figma" },
+//   { icon: <SiVite className="text-purple-400" />, name: "Vite" },
+];
+
+  return (
+    <section className="max-w-4xl mx-auto text-center p-8">
+      <div className="grid grid-cols-3 gap-6">
+        {tools.map((tool, index) => (
+          <div
+            key={index}
+            className="flex flex-col items-center gap-2 hover:scale-105 transition-transform"
+          >
+            <div className="text-4xl">{tool.icon}</div>
+            <p className="text-[0.5rem] md:text-sm text-gray-600 dark:text-gray-300">{tool.name}</p>
+          </div>
+        ))}
+      </div>
+    </section>
+  );
 };
 
 export const HitMeCardContent = () => {
@@ -60,8 +122,8 @@ const cards = [
   },
   {
     id: 2,
-    title: "Tooling",
-    description: "Soy unas uvas 🍇",
+    title: "🛠️ Tolling",
+    content: ToolingCardContent(),
     color: "bg-gray-100 dark:bg-neutral-700",
   },
   {
