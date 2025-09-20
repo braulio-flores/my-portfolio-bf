@@ -113,24 +113,48 @@ export const HitMeCardContent = () => {
   return <div>MyCards</div>;
 };
 
+export const JsonContent = () => {
+  return <div>JsonContent</div>;
+};
+
+export const CareerContent = () => {
+  return <div>CareerContent</div>;
+};
+
+export const ContactContent = () => {
+  return <div>ContactContent</div>;
+};
+
 const cards = [
   {
     id: 1,
     title: "👨‍💻 About Me",
     content: AboutMeCardContent(),
-    color: "bg-white dark:bg-neutral-800",
+    color: "bg-white dark:bg-gray-800",
   },
   {
     id: 2,
-    title: "🛠️ Tolling",
-    content: ToolingCardContent(),
-    color: "bg-gray-100 dark:bg-neutral-700",
+    title: "📝 My JSON",
+    content: JsonContent(),
+    color: "bg-blue-50 dark:bg-blue-900",
   },
   {
     id: 3,
-    title: "Hit me up",
-    description: "Soy una naranja 🍊",
-    color: "bg-gray-200 dark:bg-neutral-600",
+    title: "🚀 Career",
+    content: CareerContent(),
+    color: "bg-indigo-50 dark:bg-indigo-900",
+  },
+  {
+    id: 4,
+    title: "🛠️ Tools",
+    content: ToolingCardContent(),
+    color: "bg-slate-50 dark:bg-slate-800",
+  },
+  {
+    id: 5,
+    title: "📬 Contact",
+    content: ContactContent(),
+    color: "bg-sky-50 dark:bg-sky-900",
   },
 ];
 
