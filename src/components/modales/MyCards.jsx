@@ -23,6 +23,7 @@ import {
 } from "react-icons/si";
 
 import { FaJava } from "react-icons/fa";
+
 import Image from "next/image";
 
 import myjsonscreen from "../../assets/code.png";
@@ -128,8 +129,100 @@ export const JsonContent = () => {
   );
 };
 
+const CareerCard = ({ company, role, description, period }) => {
+  return (
+    <motion.div
+      initial={{ opacity: 0, x: -20 }}
+      animate={{ opacity: 1, x: 0 }}
+      whileHover={{ scale: 1.01 }}
+      className="relative pl-8 before:absolute before:left-0.5 before:top-0 before:h-full 
+        before:w-[3px] before:bg-gradient-to-b before:from-blue-500 before:to-transparent
+        group"
+    >
+      <div
+        className="absolute -left-[5px] top-2 h-4 w-4 rounded-full bg-white 
+        dark:bg-gray-900 border-2 border-blue-500 group-hover:scale-110 
+        transition-transform"
+      />
+
+      <div className="space-y-1">
+        <div className="flex items-center gap-3">
+          <div>
+            <div className="flex items-center gap-3">
+              <h3 className="text-sm font-medium tracking-tight">{company}</h3>
+              <div
+                className="inline-flex items-center gap-1.5 text-xs text-gray-500 
+          dark:text-gray-400 font-medium"
+              >
+                <svg
+                  className="w-3.5 h-3.5 opacity-70"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth={1.5}
+                    d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"
+                  />
+                </svg>
+                {period}
+              </div>
+            </div>
+            <p className="text-xs text-blue-500/80 font-medium">{role}</p>
+          </div>
+        </div>
+
+        <p
+          className="text-xs leading-relaxed text-gray-600 dark:text-gray-300 
+          max-w-lg"
+        >
+          {description}
+        </p>
+      </div>
+    </motion.div>
+  );
+};
+
 export const CareerContent = () => {
-  return <div>CareerContent</div>;
+  return (
+    <div
+      className="relative pt-4 max-h-[65vh] overflow-y-auto px-2 
+      scrollbar-thin scrollbar-thumb-blue-500/20 scrollbar-track-transparent
+      hover:scrollbar-thumb-blue-500/30 scroll-smooth"
+    >
+      <div className="space-y-8 pr-2">
+        <CareerCard
+          company="BBVA"
+          role="Senior Full Stack Developer"
+          description="Desarrollo de aplicaciones web empresariales y APIs REST. Implementación de microservicios con Spring Boot y desarrollo de interfaces modernas con React."
+          period="2022 - Present"
+        />
+
+        <CareerCard
+          company="SNGULAR"
+          role="Full Stack Developer"
+          description="Consultoría técnica y desarrollo de soluciones empresariales. Liderazgo en implementación de arquitecturas escalables."
+          period="2022 - 2023"
+        />
+
+        <CareerCard
+          company="SEGOB"
+          role="Web Developerr"
+          description="Desarrollo de sistemas internos y modernización de plataformas legacy. Reducción del 40% en tiempos de respuesta mediante optimización."
+          period="2021 - 2022"
+        />
+
+        <CareerCard
+          company="AntzTours"
+          role="Web Developer"
+          description="Desarrollo de plataforma de reservaciones turísticas. Mejora del 60% en experiencia de usuario y tasas de conversión."
+          period="2020 - 2021"
+        />
+      </div>
+    </div>
+  );
 };
 
 export const ContactContent = () => {
@@ -153,7 +246,7 @@ const cards = [
     id: 3,
     title: "🚀 Career",
     content: CareerContent(),
-    color: "bg-indigo-50 dark:bg-indigo-900",
+    color: "bg-emerald-50 dark:bg-emerald-950",
   },
   {
     id: 4,
@@ -205,7 +298,8 @@ export default function MyCards() {
             <motion.div
               layoutId={`card-${selectedCard.id}`}
               className={`${selectedCard.color} rounded-3xl shadow-xl 
-                dark:shadow-2xl p-8 text-gray-800 dark:text-gray-100 w-[500px] m-8`}
+                dark:shadow-2xl p-8 text-gray-800 dark:text-gray-100 w-[600px] m-8 
+                max-h-[80vh] overflow-hidden`}
               onClick={(e) => e.stopPropagation()}
               transition={{ duration: 0.4, ease: "easeInOut" }}
             >
