@@ -21,9 +21,8 @@ const MyName = () => {
         </div>
         <Image
           src={myjsonscreen}
-          className="mx-auto sm:mx-0 rounded-2xl flex-[3]"
+          className="mx-auto sm:mx-0 rounded-2xl flex-[3] w-[250px]"
           alt="Braulio Flores"
-          width={250}
         />
       </div>
       <MyCards />
