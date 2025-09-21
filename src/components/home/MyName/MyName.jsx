@@ -7,21 +7,25 @@ import myjsonscreen from "../../../assets/code.png";
 const MyName = () => {
   return (
     <>
-      <div className="text-lg sm:text-xl text-center sm:text-left">
-        Happy Welcome!
+      <div className="flex flex-col sm:flex-row items-center sm:items-start gap-6 sm:gap-12 mt-2 mb-4 min-h-[10px]">
+        <div className="flex-[1] sm:flex-[1] flex flex-col self-center h-full justify-center">
+          <div className="text-lg sm:text-xl text-center sm:text-left">
+            Happy Welcome!
+          </div>
+          <h1 className="text-2xl sm:text-6xl lg:text-8xl font-semibold text-center sm:text-left leading-[1.1] mb-4">
+            Braulio Flores
+          </h1>
+          <h1 className="text-sm sm:text-base lg:text-2xl font-semibold text-center sm:text-left leading-[1.1]">
+            Full Stack Web Developer
+          </h1>
+        </div>
+        <Image
+          src={myjsonscreen}
+          className="mx-auto sm:mx-0 rounded-2xl flex-[3]"
+          alt="Braulio Flores"
+          width={250}
+        />
       </div>
-      <h1 className="text-2xl sm:text-6xl lg:text-9xl font-semibold text-center sm:text-left leading-[1.1]">
-        Braulio Flores
-      </h1>
-      {/* <Image
-        src={myjsonscreen}
-        alt="Braulio Flores"
-      
-        className="mx-auto sm:mx-0"
-      /> */}
-      <h1 className="text-sm sm:text-base lg:text-2xl font-semibold text-center sm:text-left leading-[1.1]">
-        Full Stack Web Developer
-      </h1>
       <MyCards />
     </>
   );
