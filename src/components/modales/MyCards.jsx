@@ -23,6 +23,9 @@ import {
 } from "react-icons/si";
 
 import { FaJava } from "react-icons/fa";
+import Image from "next/image";
+
+import myjsonscreen from "../../assets/code.png";
 
 export const AboutMeCardContent = () => {
   return (
@@ -30,7 +33,7 @@ export const AboutMeCardContent = () => {
       <p className="space-y-4 text-sm text-gray-600 dark:text-gray-300">
         Passionate{" "}
         <span className="text-blue-500 dark:text-blue-400">
-        Software Engineer
+          Software Engineer
         </span>{" "}
         focused on building{" "}
         <span className="text-blue-500 dark:text-blue-400">scalable</span> and{" "}
@@ -66,31 +69,31 @@ export const AboutMeCardContent = () => {
 
 export const ToolingCardContent = () => {
   const tools = [
-  // Frontend
-  { icon: <SiReact className="text-sky-400" />, name: "React" },
-//   { icon: <SiNextdotjs className="text-white" />, name: "Next.js" },
-//   { icon: <SiTypescript className="text-blue-400" />, name: "TypeScript" },
-  { icon: <SiJavascript className="text-yellow-400" />, name: "JavaScript" },
-  { icon: <SiTailwindcss className="text-cyan-400" />, name: "Tailwind CSS" },
+    // Frontend
+    { icon: <SiReact className="text-sky-400" />, name: "React" },
+    //   { icon: <SiNextdotjs className="text-white" />, name: "Next.js" },
+    //   { icon: <SiTypescript className="text-blue-400" />, name: "TypeScript" },
+    { icon: <SiJavascript className="text-yellow-400" />, name: "JavaScript" },
+    { icon: <SiTailwindcss className="text-cyan-400" />, name: "Tailwind CSS" },
 
-  // Backend
-  { icon: <FaJava className="text-red-500" />, name: "Java" },
-  { icon: <SiSpringboot className="text-green-500" />, name: "Spring Boot" },
-//   { icon: <SiNodedotjs className="text-green-400" />, name: "Node.js" },
-  { icon: <SiPython className="text-yellow-300" />, name: "Python" },
+    // Backend
+    { icon: <FaJava className="text-red-500" />, name: "Java" },
+    { icon: <SiSpringboot className="text-green-500" />, name: "Spring Boot" },
+    //   { icon: <SiNodedotjs className="text-green-400" />, name: "Node.js" },
+    { icon: <SiPython className="text-yellow-300" />, name: "Python" },
 
-  // Databases
-  { icon: <SiPostgresql className="text-sky-500" />, name: "PostgreSQL" },
-//   { icon: <SiMongodb className="text-green-500" />, name: "MongoDB" },
-  { icon: <SiMysql className="text-orange-400" />, name: "MySQL" },
+    // Databases
+    { icon: <SiPostgresql className="text-sky-500" />, name: "PostgreSQL" },
+    //   { icon: <SiMongodb className="text-green-500" />, name: "MongoDB" },
+    { icon: <SiMysql className="text-orange-400" />, name: "MySQL" },
 
-  // DevOps / Tools
-//   { icon: <SiDocker className="text-blue-500" />, name: "Docker" },
-  { icon: <SiGit className="text-orange-500" />, name: "Git" },
-  { icon: <SiGithub className="text-gray-300" />, name: "GitHub" },
-//   { icon: <SiFigma className="text-pink-500" />, name: "Figma" },
-//   { icon: <SiVite className="text-purple-400" />, name: "Vite" },
-];
+    // DevOps / Tools
+    //   { icon: <SiDocker className="text-blue-500" />, name: "Docker" },
+    { icon: <SiGit className="text-orange-500" />, name: "Git" },
+    { icon: <SiGithub className="text-gray-300" />, name: "GitHub" },
+    //   { icon: <SiFigma className="text-pink-500" />, name: "Figma" },
+    //   { icon: <SiVite className="text-purple-400" />, name: "Vite" },
+  ];
 
   return (
     <section className="max-w-4xl mx-auto text-center p-8">
@@ -101,7 +104,9 @@ export const ToolingCardContent = () => {
             className="flex flex-col items-center gap-2 hover:scale-105 transition-transform"
           >
             <div className="text-4xl">{tool.icon}</div>
-            <p className="text-[0.5rem] md:text-sm text-gray-600 dark:text-gray-300">{tool.name}</p>
+            <p className="text-[0.5rem] md:text-sm text-gray-600 dark:text-gray-300">
+              {tool.name}
+            </p>
           </div>
         ))}
       </div>
@@ -114,7 +119,13 @@ export const HitMeCardContent = () => {
 };
 
 export const JsonContent = () => {
-  return <div>JsonContent</div>;
+  return (
+    <Image
+      src={myjsonscreen}
+      className="mx-auto sm:mx-0 rounded-4xl pt-4"
+      alt="Braulio Flores"
+    />
+  );
 };
 
 export const CareerContent = () => {
@@ -136,7 +147,7 @@ const cards = [
     id: 2,
     title: "📝 My JSON",
     content: JsonContent(),
-    color: "bg-blue-50 dark:bg-blue-900",
+    color: "bg-gray-50 dark:bg-gray-950",
   },
   {
     id: 3,
@@ -164,7 +175,7 @@ export default function MyCards() {
   return (
     <>
       {/* GRID DE CARDS */}
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-4 p-8">
+      <div className="grid grid-cols-1 sm:grid-cols-3 xl:grid-cols-5 gap-4">
         {cards.map((card) => (
           <motion.div
             key={card.id}
