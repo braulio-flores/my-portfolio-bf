@@ -27,6 +27,7 @@ import { FaJava } from "react-icons/fa";
 import Image from "next/image";
 
 import myjsonscreen from "../../assets/code.png";
+import Link from "next/link";
 
 export const AboutMeCardContent = () => {
   return (
@@ -129,7 +130,7 @@ export const JsonContent = () => {
   );
 };
 
-const CareerCard = ({ company, role, description, period }) => {
+const CareerCard = ({ company, role, description, period, uri }) => {
   return (
     <motion.div
       initial={{ opacity: 0, x: -20 }}
@@ -168,6 +169,28 @@ const CareerCard = ({ company, role, description, period }) => {
                   />
                 </svg>
                 {period}
+                {uri && (
+                  <Link
+                    href={uri}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="ml-2 text-blue-500 hover:text-blue-600 transition-colors"
+                  >
+                    <svg
+                      className="w-3.5 h-3.5"
+                      fill="none"
+                      stroke="currentColor"
+                      viewBox="0 0 24 24"
+                    >
+                      <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        strokeWidth={2}
+                        d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"
+                      />
+                    </svg>
+                  </Link>
+                )}
               </div>
             </div>
             <p className="text-xs text-blue-500/80 font-medium">{role}</p>
@@ -196,28 +219,31 @@ export const CareerContent = () => {
         <CareerCard
           company="BBVA"
           role="Senior Full Stack Developer"
-          description="Desarrollo de aplicaciones web empresariales y APIs REST. Implementación de microservicios con Spring Boot y desarrollo de interfaces modernas con React."
+          description="Developed full-stack solutions combining React for dynamic user interfaces and Spring Boot with Java 17 and 21, for scalable backend systems, working in Agile environments."
           period="2022 - Present"
+          uri="https://www.bbva.mx/"
         />
 
         <CareerCard
           company="SNGULAR"
           role="Full Stack Developer"
-          description="Consultoría técnica y desarrollo de soluciones empresariales. Liderazgo en implementación de arquitecturas escalables."
+          description="Technical consulting and enterprise solution development. Leadership in the implementation of scalable architectures."
           period="2022 - 2023"
+          uri={"https://www.sngular.com/es/"}
         />
 
         <CareerCard
           company="SEGOB"
-          role="Web Developerr"
-          description="Desarrollo de sistemas internos y modernización de plataformas legacy. Reducción del 40% en tiempos de respuesta mediante optimización."
+          role="Web Developer"
+          description="Developed an interactive React frontend and robust Spring Boot backend to optimize data management and streamline internal workflows, collaborating with cross-functional teams to deliver efficient solutions."
           period="2021 - 2022"
+          uri={"http://justicia.segob.gob.mx/"}
         />
 
         <CareerCard
           company="AntzTours"
           role="Web Developer"
-          description="Desarrollo de plataforma de reservaciones turísticas. Mejora del 60% en experiencia de usuario y tasas de conversión."
+          description="Created a dynamic and responsive React frontend integrated with a Spring Boot backend, enhancing user experience and interface performance while collaborating closely with backend and design teams."
           period="2020 - 2021"
         />
       </div>
