@@ -3,6 +3,7 @@ import React from "react";
 import MyCards from "@/components/modales/MyCards";
 
 import myjsonscreen from "../../../assets/code.png";
+import myanimation from "../../../assets/myanimation.png";
 
 const MyName = () => {
   return (
@@ -22,7 +23,12 @@ const MyName = () => {
         <Image
           src={myjsonscreen}
           className="mx-auto sm:mx-0 rounded-2xl flex-[3] w-[250px]"
-          alt="Braulio Flores"
+          alt="Braulio Flores JSON beauty personal Information"
+        />
+        <Image
+          src={myanimation}
+          className="mx-auto sm:mx-0 rounded-full flex-[3] w-[250px]"
+          alt="Braulio Flores My Animation"
         />
       </div>
       <MyCards />
