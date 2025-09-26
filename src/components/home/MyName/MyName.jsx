@@ -1,6 +1,7 @@
 import Image from "next/image";
 import React from "react";
 import MyCards from "@/components/modales/MyCards";
+import DynamicBackground from "@/components/background/DynamicBackground";
 
 import myjsonscreen from "../../../assets/code.png";
 import myanimation from "../../../assets/myanimation.png";
@@ -8,6 +9,7 @@ import myanimation from "../../../assets/myanimation.png";
 const MyName = () => {
   return (
     <>
+      <DynamicBackground />
       <div className="flex flex-col sm:flex-row items-center sm:items-start gap-6 sm:gap-12 mt-2 mb-4 min-h-[10px]">
         <div className="flex-[1] sm:flex-[1] flex flex-col self-center h-full justify-center">
           <div className="text-lg sm:text-xl text-center sm:text-left">
