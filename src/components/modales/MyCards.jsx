@@ -20,6 +20,7 @@ import {
   SiMysql,
   SiFigma,
   SiVite,
+  SiLinkedin,
 } from "react-icons/si";
 
 import { FaJava } from "react-icons/fa";
@@ -252,7 +253,68 @@ export const CareerContent = () => {
 };
 
 export const ContactContent = () => {
-  return <div>ContactContent</div>;
+  const contactLinks = [
+    {
+      icon: <SiLinkedin className="text-blue-600" />,
+      label: "LinkedIn",
+      href: "https://www.linkedin.com/in/braulio-flores-74a25b200/",
+      description: "Let's connect professionally",
+    },
+    {
+      icon: <SiGithub className="dark:text-white text-black" />,
+      label: "GitHub",
+      href: "https://github.com/braulio-flores",
+      description: "Check out my code",
+    },
+    {
+      icon: (
+        <svg
+          className="w-6 h-6 text-red-500"
+          fill="currentColor"
+          viewBox="0 0 24 24"
+        >
+          <path d="M20.33 3.67a1.45 1.45 0 0 0-1.47-.35L4.23 8.2a1.44 1.44 0 0 0-.07 2.71l6.84 2.9L15.67 22a1.44 1.44 0 0 0 1.93.44 1.42 1.42 0 0 0 .44-.44l4.85-14.44a1.42 1.42 0 0 0-.56-1.89Z" />
+        </svg>
+      ),
+      label: "Email",
+      href: "mailto:bfloresl1400@outlook.com",
+      description: "Drop me a line",
+    },
+  ];
+
+  return (
+    <div className="flex flex-col gap-8 mt-4">
+      <p className="text-sm text-gray-600 dark:text-gray-300">
+        I'm always interested in hearing about new opportunities and exciting
+        projects. Feel free to reach out through any of these channels:
+      </p>
+
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+        {contactLinks.map((link, index) => (
+          <a
+            key={index}
+            href={link.href}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="flex flex-col items-center p-4 rounded-xl 
+              bg-white/50 dark:bg-gray-800/50 backdrop-blur-sm
+              hover:scale-105 transition-all duration-300
+              shadow-sm hover:shadow-md dark:shadow-gray-900/30"
+          >
+            <div className="text-3xl mb-2">{link.icon}</div>
+            <h3 className="font-medium text-sm mb-1">{link.label}</h3>
+            <p className="text-xs text-gray-500 dark:text-gray-400 text-center">
+              {link.description}
+            </p>
+          </a>
+        ))}
+      </div>
+
+      <p className="text-center text-xs text-gray-500 dark:text-gray-400 mt-4">
+        Based in Mexico 🇲🇽 • Available for remote opportunities worldwide 🌎
+      </p>
+    </div>
+  );
 };
 
 const cards = [
