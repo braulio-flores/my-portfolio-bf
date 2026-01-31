@@ -13,7 +13,6 @@ const CareerSection = () => {
       description: "React, Spring Boot with Java 17/21, scalable backend systems in Agile environment.",
       period: "2022 - Present",
       link: "https://www.bbva.mx/",
-      icon: "🏦"
     },
     {
       company: "SNGULAR",
@@ -21,7 +20,6 @@ const CareerSection = () => {
       description: "Technical consulting, enterprise solutions, and scalable architectures.",
       period: "2022 - 2023",
       link: "https://www.sngular.com/es/",
-      icon: "💻"
     },
     {
       company: "SEGOB",
@@ -29,14 +27,12 @@ const CareerSection = () => {
       description: "React frontend and Spring Boot backend to optimize internal data management.",
       period: "2021 - 2022",
       link: "http://justicia.segob.gob.mx/",
-      icon: "⚖️"
     },
     {
       company: "AntzTours",
       role: "Web Developer",
       description: "Responsive React frontend with Spring Boot backend, improved UX and performance.",
       period: "2020 - 2021",
-      icon: "✈️"
     }
   ];
 
@@ -51,7 +47,7 @@ const CareerSection = () => {
           className="mb-16"
         >
           <h2 className="text-5xl md:text-6xl lg:text-7xl font-bold mb-6 text-gray-900 dark:text-white">
-            Experiencia
+            Career
           </h2>
           <p className="text-lg text-gray-600 dark:text-gray-400 max-w-2xl">
             Full stack development trajectory and technical consulting

@@ -28,7 +28,7 @@ const StatsCard = () => {
     <div className="relative h-full min-h-[400px] rounded-lg border border-gray-200 dark:border-gray-800 bg-white dark:bg-gray-900 p-8 overflow-hidden shadow-sm hover:shadow-md transition-all">
       <div>
         <h3 className="text-2xl md:text-3xl font-bold mb-2 text-gray-900 dark:text-white">
-          Experiencia & Logros
+          Experience & Achievements
         </h3>
         <p className="text-gray-600 dark:text-gray-400 mb-8">
           Numbers that speak for themselves

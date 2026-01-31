@@ -11,7 +11,7 @@ const CodeSnippetCard = () => {
     backend: "Node.js, Spring Boot",
     databases: "PostgreSQL, MongoDB",
     deploy: "Docker, AWS",
-    mindset: "Clean code ✨"
+    mindset: "Clean code"
   }
 }`;
 
