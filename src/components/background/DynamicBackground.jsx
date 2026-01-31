@@ -12,7 +12,6 @@ const DynamicBackground = () => {
       mouseY.set(e.clientY);
     };
 
-    // Generar partículas aleatorias
     const newParticles = Array.from({ length: 20 }, (_, i) => ({
       id: i,
       x: Math.random() * window.innerWidth,
@@ -27,7 +26,6 @@ const DynamicBackground = () => {
 
   return (
     <div className="fixed inset-0 -z-10 overflow-hidden">
-      {/* Gradiente principal animado */}
       <motion.div
         className="absolute inset-0 bg-gradient-to-br from-blue-500/20 via-purple-500/20 to-pink-500/20"
         animate={{
@@ -40,7 +38,6 @@ const DynamicBackground = () => {
         transition={{ duration: 10, repeat: Infinity }}
       />
 
-      {/* Partículas interactivas */}
       {particles.map((particle) => (
         <motion.div
           key={particle.id}
@@ -65,7 +62,6 @@ const DynamicBackground = () => {
         />
       ))}
 
-      {/* Efecto de resplandor que sigue al mouse */}
       <motion.div
         className="absolute w-[500px] h-[500px] rounded-full bg-blue-500/10 blur-3xl"
         style={{
