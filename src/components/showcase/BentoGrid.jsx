@@ -9,7 +9,7 @@ import CTACard from "./CTACard";
 
 const BentoGrid = () => {
   return (
-    <section className="w-full py-20 px-4 md:px-8 lg:px-12">
+    <section id="stack" className="w-full py-20 px-4 md:px-8 lg:px-12">
       <div className="max-w-7xl mx-auto">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -19,7 +19,7 @@ const BentoGrid = () => {
           className="mb-16"
         >
           <h2 className="text-5xl md:text-6xl lg:text-7xl font-bold mb-6 text-gray-900 dark:text-white">
-            Experience & Skills
+            Stack & Skills
           </h2>
           <p className="text-lg text-gray-600 dark:text-gray-400 max-w-2xl">
             My tech stack, achievements and expertise

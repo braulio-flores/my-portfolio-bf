@@ -37,7 +37,7 @@ const CareerSection = () => {
   ];
 
   return (
-    <section className="w-full py-20 px-4 md:px-8 lg:px-12">
+    <section id="career" className="w-full py-20 px-4 md:px-8 lg:px-12">
       <div className="max-w-7xl mx-auto">
         <motion.div
           initial={{ opacity: 0, y: 20 }}

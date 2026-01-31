@@ -7,6 +7,7 @@ import BentoGrid from "@/components/showcase/BentoGrid";
 import FeaturedProjects from "@/components/showcase/FeaturedProjects";
 import AboutSection from "@/components/showcase/AboutSection";
 import CareerSection from "@/components/showcase/CareerSection";
+import ContactSection from "@/components/showcase/ContactSection";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -55,6 +56,11 @@ export default function Home() {
           {/* Featured Projects Section */}
           <section className="w-full bg-gradient-to-b from-transparent via-purple-500/5 to-transparent">
             <FeaturedProjects />
+          </section>
+
+          {/* Contact Section */}
+          <section className="w-full bg-gradient-to-b from-transparent via-blue-500/5 to-transparent">
+            <ContactSection />
           </section>
 
           {/* Footer */}

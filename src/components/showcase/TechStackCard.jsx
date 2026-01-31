@@ -40,7 +40,7 @@ const TechStackCard = () => {
           Technologies
         </h3>
         <p className="text-gray-600 dark:text-gray-400 mb-8">
-          Herramientas que domino
+          Tools and technologies I work with
         </p>
 
         <div className="grid grid-cols-3 md:grid-cols-4 gap-6">

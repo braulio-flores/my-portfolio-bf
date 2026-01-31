@@ -7,7 +7,7 @@ import { HiArrowTopRightOnSquare } from "react-icons/hi2";
 
 const FeaturedProjects = () => {
   return (
-    <section className="w-full py-20 px-4 md:px-8 lg:px-12">
+    <section id="proyects" className="w-full py-20 px-4 md:px-8 lg:px-12">
       <div className="max-w-7xl mx-auto">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -33,7 +33,7 @@ const FeaturedProjects = () => {
             whileHover={{ y: -8 }}
             className="lg:col-span-2"
           >
-            <Link href="https://tickomium.com" target="_blank" rel="noopener noreferrer">
+            <Link href="https://app.tickomium.com" target="_blank" rel="noopener noreferrer">
               <div className="relative h-full overflow-hidden rounded-lg border border-gray-200 dark:border-gray-800 bg-white dark:bg-gray-900 shadow-sm hover:shadow-md transition-all cursor-pointer">
                 <div className="absolute inset-0 bg-gradient-to-br from-blue-600/10 to-purple-600/10 dark:from-blue-600/5 dark:to-purple-600/5" />
                 
